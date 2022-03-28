@@ -1,0 +1,35 @@
+<div class="containerDiv">
+    <div class="text-center">
+       <h1 *ngIf="user$ | async as user">HEY {{user.displayName | uppercase}}!</h1>
+      <h1 class="title">You are secure in our hands</h1>
+    </div>
+    <!--===== ABOUT =====-->
+    <div class="about__container">
+      <div class="row">
+        <div class="col-md-6">
+          <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJd2iMFg213Edg5YdD845zfdfXmD-T85ZXtw&usqp=CAU"
+            class="img-fluid " style="height: 15rem;"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6 mt-5">
+          <p class="about__text font-italic">
+            This is a User Management application where storing all the details of our users! <br />We gives value to our customers, and manage them with
+            full security. Here you can login and setup your profiles so that all users can know other users works.
+            <br> 
+          </p>
+          <div class="about__social" style="margin-top: 15px">
+            <p>
+               <mat-icon>email</mat-icon>
+               <mat-icon >github</mat-icon> 
+               <mat-icon>call</mat-icon>
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div></div>
+    </div>
+  </div>
+  

@@ -19,10 +19,11 @@ export class AuthenticationService {
   login(email:string,password:string){
     return from(signInWithEmailAndPassword(this.auth,email,password))
   }
-  signUp(name:string,email:string,password:string,file:string){
-    return from(createUserWithEmailAndPassword(this.auth,email,password)).pipe(
-      switchMap(({ user })=>updateProfile(user,{displayName:name,photoURL:file}))
-    )
+  signUp(email:string,password:string){
+    return from(createUserWithEmailAndPassword(this.auth,email,password))
+    // .pipe(
+    //   switchMap(({ user })=>updateProfile(user,{displayName:name,photoURL:file}))
+    // )
   }
 
   updateProfileData(profileData:Partial<UserInfo>):Observable<any>{

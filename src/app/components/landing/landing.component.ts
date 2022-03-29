@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { UsersService } from 'src/app/services/user-service';
 
 @Component({
   selector: 'app-landing',
@@ -8,9 +9,10 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class LandingComponent implements OnInit {
 
-  user$ = this.authService.currentUser$;
+  user$ = this.userService.currentUserProfile$;
 
-  constructor(private authService:AuthenticationService) { }
+  constructor(private authService:AuthenticationService,
+    private userService:UsersService) { }
 
   ngOnInit(): void {
   }

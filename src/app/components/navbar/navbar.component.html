@@ -2,9 +2,9 @@
   <mat-toolbar color="primary">
     User Registration
     <div>
-    <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+    <ng-container *ngIf="user$ | async as user; else loginButton">
       <button mat-button [matMenuTriggerFor]="userMenu" >
-       <img width="30" height="30" [src]="user.photoURL" class="profile-image-toolbar" alt="">
+       <img width="30" height="30" [src]="user.photoURL ?? 'assets/download.png'" class="profile-image-toolbar" alt="">
        {{user.displayName}}
       <mat-icon>expand_more</mat-icon></button>
 

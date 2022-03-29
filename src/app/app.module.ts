@@ -6,6 +6,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select'
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
@@ -51,6 +52,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     MatDialogModule,
     MatInputModule,
     MatRadioModule,
+    MatSelectModule,
     MatMenuModule,
     MatButtonModule,
     MatToolbarModule,

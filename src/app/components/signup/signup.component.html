@@ -79,8 +79,6 @@
             [aspectRatio]="4 / 3"
             format="png"
             (imageCropped)="imageCropped($event)"
-           
-            (cropperReady)="cropperReady()"
         ></image-cropper>
         
         <img [src]="croppedImage" style="height: 100px;" />
